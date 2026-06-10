@@ -17,11 +17,11 @@ export function FounderStory() {
         <div className="overflow-hidden rounded-[1.8rem] border border-black/8 bg-white shadow-[0_18px_48px_rgba(31,21,27,0.08)]">
           <div className="relative aspect-[4/5] bg-[linear-gradient(180deg,_#fffaf4,_#f2ebe2)]">
             <Image
-              src="/images/kateownerimage.png"
+              src="/images/ownerimagebetterratio.png"
               alt="Power Dolls founder Katerina Jovevski with a group of dolls"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-contain object-center"
+              className="object-cover object-center"
             />
           </div>
           <div className="bg-[#18141a] p-6 text-white">
