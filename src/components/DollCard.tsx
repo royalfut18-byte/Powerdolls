@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import type { Doll } from '@/lib/dolls';
 
@@ -25,7 +26,9 @@ export function DollCard({ doll, index }: DollCardProps) {
       </div>
       <div className="relative z-10 flex h-full flex-col">
         <div className="flex items-start justify-between gap-3">
-          <span className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.3em] ${doll.badgeClass}`}>
+          <span
+            className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.3em] ${doll.badgeClass}`}
+          >
             {doll.theme}
           </span>
           <span className="rounded-full border border-current/15 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-current/70">
@@ -33,14 +36,15 @@ export function DollCard({ doll, index }: DollCardProps) {
           </span>
         </div>
 
-        <div className="mt-6 rounded-[1.6rem] border border-current/12 bg-white/16 p-4">
-          <span className="inline-flex rounded-full bg-black/72 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white">
-            Replace with image
-          </span>
-          <p className="mt-4 font-mono text-xs text-current/70">{doll.assetPath}</p>
-          {/* Replace the placeholder panel above with the final doll photography asset at doll.assetPath. */}
-          <div className="mt-5 rounded-[1.2rem] border border-dashed border-current/20 bg-white/26 px-4 py-10 text-center">
-            <p className="font-display text-3xl">{doll.name}</p>
+        <div className="mt-6 overflow-hidden rounded-[1.6rem] border border-current/12 bg-white/14">
+          <div className="relative aspect-[4/5]">
+            <Image
+              src={doll.assetPath}
+              alt={`${doll.name} Power Dolls artwork`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              className="object-cover object-center"
+            />
           </div>
         </div>
 

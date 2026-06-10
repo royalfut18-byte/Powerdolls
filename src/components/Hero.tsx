@@ -1,22 +1,29 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
-import { drift, fadeUp, stagger } from '@/lib/animations';
+import { fadeUp, stagger } from '@/lib/animations';
 
 const collageCards = [
   {
-    title: 'Doll line-up moment',
-    path: '/images/power-dolls-lineup.jpg',
+    title: 'Power Dolls line-up',
+    subtitle: 'A full world of colour and character.',
+    path: '/images/alldollsinoneimage.png',
+    alt: 'Power Dolls line-up on a colourful floral background',
     className: 'col-span-2 bg-[#fff4e6] md:absolute md:left-0 md:top-4 md:w-52 md:rotate-[-7deg]',
   },
   {
-    title: 'Hero doll portrait',
-    path: '/images/power-dolls-hero.jpg',
+    title: 'World in one frame',
+    subtitle: 'Layered friendships, comfort, and imagination.',
+    path: '/images/imagewithallpowerdolls.png',
+    alt: 'Close-up collage of multiple Power Dolls together',
     className: 'bg-[#fff] md:absolute md:right-0 md:top-28 md:w-60 md:rotate-[6deg]',
   },
   {
-    title: 'Pattern detail board',
-    path: '/images/power-dolls-patterns.jpg',
+    title: 'Star Struck spotlight',
+    subtitle: 'Galaxy comfort for deeply loved hearts.',
+    path: '/images/startruckbluedollimage.png',
+    alt: 'Star Struck doll against a galaxy background',
     className: 'bg-[#f7f0ff] md:absolute md:bottom-3 md:left-12 md:w-56 md:rotate-[-3deg]',
   },
 ];
@@ -51,8 +58,8 @@ export function Hero() {
             className="max-w-2xl text-lg leading-8 text-[rgba(29,19,33,0.78)] sm:text-xl"
           >
             Power Dolls are soft, meaningful friends created to comfort, encourage, and empower
-            children through life&apos;s big feelings, brave moments, learning challenges, and
-            everyday wins.
+            children through life's big feelings, brave moments, learning challenges, and everyday
+            wins.
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
             <motion.a
@@ -95,17 +102,16 @@ export function Hero() {
             className="absolute left-[6%] top-[4%] h-28 w-28 rounded-[40%_60%_60%_40%/46%_47%_53%_54%] bg-[#ff5a97]/20 md:top-[8%] md:h-40 md:w-40"
           />
           <motion.div
-            animate={
-              reduceMotion
-                ? undefined
-                : { opacity: [0.45, 0.62, 0.45], y: [0, -6, 0] }
-            }
-            transition={{ duration: 3.6, repeat: 1, ease: [0.42, 0, 0.58, 1] as const, delay: 0.2 }}
+            animate={reduceMotion ? undefined : { opacity: [0.45, 0.62, 0.45], y: [0, -6, 0] }}
+            transition={{
+              duration: 3.6,
+              repeat: 1,
+              ease: [0.42, 0, 0.58, 1] as const,
+              delay: 0.2,
+            }}
             className="absolute right-[3%] top-[9%] h-32 w-32 rounded-full bg-[#74d8ff]/20 md:top-[20%] md:h-48 md:w-48"
           />
-          <motion.div
-            className="hero-panel relative mt-6 rounded-[2rem] px-4 py-5 sm:px-5 sm:py-6 md:absolute md:inset-x-0 md:top-10 md:px-8 md:py-8"
-          >
+          <motion.div className="hero-panel relative mt-6 rounded-[2rem] px-4 py-5 sm:px-5 sm:py-6 md:absolute md:inset-x-0 md:top-10 md:px-8 md:py-8">
             <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
               <div className="relative overflow-hidden rounded-[1.8rem] bg-[#111216] p-5 text-white shadow-[0_22px_60px_rgba(18,13,18,0.32)]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_18%,_rgba(255,208,92,0.2),_transparent_20%),radial-gradient(circle_at_72%_22%,_rgba(255,91,151,0.22),_transparent_22%),radial-gradient(circle_at_55%_70%,_rgba(74,176,255,0.18),_transparent_26%)]" />
@@ -139,22 +145,22 @@ export function Hero() {
                     initial={{ opacity: 0, y: 24, rotate: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, delay: 0.2 + index * 0.12 }}
-                    whileHover={
-                      reduceMotion ? undefined : { y: -8, rotate: index === 1 ? 3 : -3 }
-                    }
-                    className={`relative w-full rounded-[1.4rem] border border-[rgba(17,18,22,0.08)] p-3 shadow-[0_22px_55px_rgba(30,19,31,0.18)] ${card.className}`}
+                    whileHover={reduceMotion ? undefined : { y: -8, rotate: index === 1 ? 3 : -3 }}
+                    className={`relative w-full overflow-hidden rounded-[1.4rem] border border-[rgba(17,18,22,0.08)] p-3 shadow-[0_22px_55px_rgba(30,19,31,0.18)] ${card.className}`}
                   >
-                    <div className="relative flex h-44 flex-col justify-between overflow-hidden rounded-[1rem] border border-[rgba(17,18,22,0.08)] bg-[linear-gradient(135deg,_rgba(255,255,255,0.9),_rgba(255,255,255,0.3))] p-4 md:h-56">
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,_rgba(255,90,151,0.18),_transparent_18%),radial-gradient(circle_at_75%_28%,_rgba(115,212,255,0.18),_transparent_20%),radial-gradient(circle_at_45%_75%,_rgba(255,214,92,0.26),_transparent_24%)]" />
-                      <span className="relative inline-flex w-fit rounded-full bg-black/75 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white">
-                        Replace with image
-                      </span>
-                      <div className="relative">
-                        <p className="font-display text-2xl leading-tight text-[var(--ink)]">
-                          {card.title}
-                        </p>
-                        <p className="mt-3 font-mono text-xs text-[rgba(29,19,33,0.62)]">
-                          {card.path}
+                    <div className="relative h-44 overflow-hidden rounded-[1rem] border border-[rgba(17,18,22,0.08)] md:h-56">
+                      <Image
+                        src={card.path}
+                        alt={card.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 30vw, 20vw"
+                        className="object-cover object-center"
+                      />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,_transparent_28%,_rgba(17,18,22,0.08)_60%,_rgba(17,18,22,0.72)_100%)]" />
+                      <div className="absolute inset-x-0 bottom-0 p-4 text-white">
+                        <p className="font-display text-xl leading-tight">{card.title}</p>
+                        <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/72">
+                          {card.subtitle}
                         </p>
                       </div>
                     </div>

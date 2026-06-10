@@ -1,14 +1,40 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeUp } from '@/lib/animations';
 
 const collage = [
-  { title: 'Line-up portrait', path: '/images/power-dolls-lineup.jpg', className: 'md:col-span-2 md:row-span-2 bg-[#fff2df]' },
-  { title: 'Star Struck detail', path: '/images/star-struck.jpg', className: 'bg-[#f2ebff]' },
-  { title: 'Inside Out detail', path: '/images/inside-out.jpg', className: 'bg-[#ffe6ee]' },
-  { title: 'Worry Monster notes', path: '/images/worry-monster.jpg', className: 'bg-[#ebe9ff]' },
-  { title: 'Pattern collage', path: '/images/power-dolls-pattern-board.jpg', className: 'md:col-span-2 bg-[#e4f5ff]' },
+  {
+    title: 'Line-up portrait',
+    path: '/images/alldollsinoneimage.png',
+    alt: 'Full Power Dolls line-up on a colourful floral background',
+    className: 'md:col-span-2 md:row-span-2 bg-[#fff2df]',
+  },
+  {
+    title: 'Star Struck detail',
+    path: '/images/startruckbluedollimage.png',
+    alt: 'Star Struck doll against a galaxy background',
+    className: 'bg-[#f2ebff]',
+  },
+  {
+    title: 'Inside Out detail',
+    path: '/images/insideoutdoll.png',
+    alt: 'Inside Out doll against a colourful paisley pattern',
+    className: 'bg-[#ffe6ee]',
+  },
+  {
+    title: 'Worry Monster notes',
+    path: '/images/worrymonster.png',
+    alt: 'Worry Monster doll on a playful monster pattern background',
+    className: 'bg-[#ebe9ff]',
+  },
+  {
+    title: 'Doll world collage',
+    path: '/images/imagewithallpowerdolls.png',
+    alt: 'Close-up collage of multiple Power Dolls together',
+    className: 'md:col-span-2 bg-[#e4f5ff]',
+  },
 ];
 
 export function GalleryCollage() {
@@ -41,18 +67,18 @@ export function GalleryCollage() {
               whileHover={{ y: -8, rotate: index % 2 === 0 ? 0.4 : -0.4 }}
               className={`rounded-[1.8rem] border border-black/8 p-3 shadow-[0_22px_60px_rgba(30,19,31,0.12)] ${item.className}`}
             >
-              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[1.4rem] border border-black/8 bg-[linear-gradient(145deg,_rgba(255,255,255,0.9),_rgba(255,255,255,0.45))] p-5">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,_rgba(255,90,151,0.14),_transparent_18%),radial-gradient(circle_at_74%_28%,_rgba(115,212,255,0.18),_transparent_20%),radial-gradient(circle_at_40%_78%,_rgba(255,214,92,0.18),_transparent_24%)]" />
-                <span className="relative inline-flex w-fit rounded-full bg-black/80 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white">
-                  Replace with image
-                </span>
-                <div className="relative">
-                  <p className="font-display text-[1.8rem] text-[var(--ink)] sm:text-3xl">
-                    {item.title}
-                  </p>
-                  <p className="mt-3 font-mono text-xs text-[rgba(29,19,33,0.6)]">{item.path}</p>
-                  {/* Swap this placeholder with the production gallery asset at item.path. */}
-                </div>
+              <div className="relative h-full overflow-hidden rounded-[1.4rem] border border-black/8">
+                <Image
+                  src={item.path}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,_transparent_36%,_rgba(17,18,22,0.08)_58%,_rgba(17,18,22,0.78)_100%)]" />
+                <figcaption className="absolute inset-x-0 bottom-0 p-5 text-white">
+                  <p className="font-display text-[1.8rem] sm:text-3xl">{item.title}</p>
+                </figcaption>
               </div>
             </motion.figure>
           ))}

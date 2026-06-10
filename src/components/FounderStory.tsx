@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeUp } from '@/lib/animations';
 
@@ -11,12 +12,23 @@ export function FounderStory() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="mx-auto grid max-w-6xl gap-6 rounded-[2.4rem] bg-[rgba(255,252,247,0.82)] p-6 shadow-[0_22px_70px_rgba(31,21,27,0.09)] backdrop-blur-sm md:grid-cols-[0.72fr_1.28fr] md:p-8"
+        className="mx-auto grid max-w-6xl gap-6 rounded-[2.4rem] bg-[rgba(255,252,247,0.82)] p-6 shadow-[0_22px_70px_rgba(31,21,27,0.09)] md:grid-cols-[0.86fr_1.14fr] md:p-8"
       >
-        <div className="rounded-[1.8rem] bg-[#18141a] p-6 text-white">
-          <p className="text-xs uppercase tracking-[0.42em] text-white/58">Founder Story</p>
-          <p className="mt-8 font-script text-4xl text-[#ffe2a1]">Katerina Jovevski</p>
-          <p className="mt-3 text-sm uppercase tracking-[0.28em] text-white/60">Company Director</p>
+        <div className="overflow-hidden rounded-[1.8rem] border border-black/8 bg-white shadow-[0_18px_48px_rgba(31,21,27,0.08)]">
+          <div className="relative aspect-[4/5] bg-[linear-gradient(180deg,_#fffaf4,_#f2ebe2)]">
+            <Image
+              src="/images/kateownerimage.png"
+              alt="Power Dolls founder Katerina Jovevski with a group of dolls"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-contain object-center"
+            />
+          </div>
+          <div className="bg-[#18141a] p-6 text-white">
+            <p className="text-xs uppercase tracking-[0.42em] text-white/58">Founder Story</p>
+            <p className="mt-6 font-script text-4xl text-[#ffe2a1]">Katerina Jovevski</p>
+            <p className="mt-3 text-sm uppercase tracking-[0.28em] text-white/60">Company Director</p>
+          </div>
         </div>
         <div className="flex flex-col justify-center gap-5 px-1 py-2 md:px-5">
           <h2 className="font-display text-4xl leading-tight text-[var(--ink)] sm:text-5xl">
