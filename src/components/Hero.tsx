@@ -90,30 +90,20 @@ export function Hero() {
 
         <div className="relative min-h-[20rem] md:min-h-[38rem] lg:min-h-[46rem]">
           <motion.div
-            animate={reduceMotion ? undefined : drift}
-            className="absolute left-[6%] top-[4%] h-28 w-28 rounded-[40%_60%_60%_40%/46%_47%_53%_54%] bg-[#ff5a97]/25 blur-2xl md:top-[8%] md:h-40 md:w-40"
+            animate={reduceMotion ? undefined : { opacity: [0.55, 0.72, 0.55] }}
+            transition={{ duration: 3.2, repeat: 1, ease: [0.42, 0, 0.58, 1] as const }}
+            className="absolute left-[6%] top-[4%] h-28 w-28 rounded-[40%_60%_60%_40%/46%_47%_53%_54%] bg-[#ff5a97]/20 md:top-[8%] md:h-40 md:w-40"
           />
           <motion.div
             animate={
               reduceMotion
                 ? undefined
-                : { ...drift, transition: { ...drift.transition, delay: 0.4 } }
+                : { opacity: [0.45, 0.62, 0.45], y: [0, -6, 0] }
             }
-            className="absolute right-[3%] top-[9%] h-32 w-32 rounded-full bg-[#74d8ff]/25 blur-2xl md:top-[20%] md:h-48 md:w-48"
+            transition={{ duration: 3.6, repeat: 1, ease: [0.42, 0, 0.58, 1] as const, delay: 0.2 }}
+            className="absolute right-[3%] top-[9%] h-32 w-32 rounded-full bg-[#74d8ff]/20 md:top-[20%] md:h-48 md:w-48"
           />
           <motion.div
-            animate={
-              reduceMotion
-                ? undefined
-                : {
-                    y: [0, -10, 0],
-                    transition: {
-                      duration: 7,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: [0.42, 0, 0.58, 1] as const,
-                    },
-                  }
-            }
             className="hero-panel relative mt-6 rounded-[2rem] px-4 py-5 sm:px-5 sm:py-6 md:absolute md:inset-x-0 md:top-10 md:px-8 md:py-8"
           >
             <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
@@ -175,36 +165,13 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            animate={
-              reduceMotion
-                ? undefined
-                : {
-                    y: [0, -12, 0],
-                    transition: {
-                      duration: 6,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: [0.42, 0, 0.58, 1] as const,
-                    },
-                  }
-            }
+            whileHover={reduceMotion ? undefined : { y: -3 }}
             className="relative mt-4 w-fit rounded-[1.8rem] bg-[var(--yellow)] px-5 py-4 shadow-[0_22px_45px_rgba(255,188,48,0.35)] md:absolute md:bottom-2 md:left-0 md:mt-0"
           >
             <p className="font-display text-2xl text-[var(--ink)]">For brave moments.</p>
           </motion.div>
           <motion.div
-            animate={
-              reduceMotion
-                ? undefined
-                : {
-                    y: [0, 8, 0],
-                    transition: {
-                      duration: 5.5,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: [0.42, 0, 0.58, 1] as const,
-                      delay: 0.4,
-                    },
-                  }
-            }
+            whileHover={reduceMotion ? undefined : { y: -3 }}
             className="relative mt-3 ml-auto w-fit rounded-[999px] bg-[var(--hot-pink)] px-4 py-2 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(255,90,151,0.34)] md:absolute md:bottom-20 md:right-3 md:mt-0"
           >
             Hope, stitched softly.

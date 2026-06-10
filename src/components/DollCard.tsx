@@ -33,7 +33,7 @@ export function DollCard({ doll, index }: DollCardProps) {
           </span>
         </div>
 
-        <div className="mt-6 rounded-[1.6rem] border border-current/12 bg-white/18 p-4 backdrop-blur-[2px]">
+        <div className="mt-6 rounded-[1.6rem] border border-current/12 bg-white/16 p-4">
           <span className="inline-flex rounded-full bg-black/72 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white">
             Replace with image
           </span>
@@ -51,8 +51,8 @@ export function DollCard({ doll, index }: DollCardProps) {
           </div>
 
           <motion.div
-            animate={reduceMotion ? undefined : { y: [0, -3, 0] }}
-            transition={{ duration: 3.4, repeat: Number.POSITIVE_INFINITY, ease: [0.42, 0, 0.58, 1] as const, delay: index * 0.12 }}
+            whileHover={reduceMotion ? undefined : { y: -4 }}
+            transition={{ duration: 0.22, ease: 'easeOut' }}
             className="relative overflow-hidden rounded-[1.5rem] border border-current/12 bg-white/18 p-5"
           >
             <div className="absolute inset-x-5 top-4 h-px bg-current/18" />
