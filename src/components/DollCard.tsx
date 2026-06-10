@@ -36,14 +36,14 @@ export function DollCard({ doll, index }: DollCardProps) {
           </span>
         </div>
 
-        <div className="mt-6 overflow-hidden rounded-[1.6rem] border border-current/12 bg-white/14">
-          <div className="relative aspect-[4/5]">
+        <div className="mt-6 overflow-hidden rounded-[1.6rem] border border-current/12 bg-white/14 p-3">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.2rem] bg-white/12">
             <Image
               src={doll.assetPath}
               alt={`${doll.name} Power Dolls artwork`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-              className="object-cover object-center"
+              className="object-contain object-center"
             />
           </div>
         </div>
