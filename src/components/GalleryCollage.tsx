@@ -25,12 +25,12 @@ export function GalleryCollage() {
           <p className="text-xs uppercase tracking-[0.42em] text-[rgba(29,19,33,0.56)]">
             Visual World
           </p>
-          <h2 className="mt-4 font-display text-5xl leading-[0.95] text-[var(--ink)] sm:text-6xl">
+          <h2 className="mt-4 font-display text-4xl leading-[0.95] text-[var(--ink)] sm:text-6xl">
             An editorial collage of pattern, softness, and joyful character.
           </h2>
         </motion.div>
 
-        <div className="grid auto-rows-[220px] gap-5 md:grid-cols-3">
+        <div className="grid auto-rows-[200px] gap-5 sm:auto-rows-[220px] md:grid-cols-3">
           {collage.map((item, index) => (
             <motion.figure
               key={item.path}
@@ -47,7 +47,9 @@ export function GalleryCollage() {
                   Replace with image
                 </span>
                 <div className="relative">
-                  <p className="font-display text-3xl text-[var(--ink)]">{item.title}</p>
+                  <p className="font-display text-[1.8rem] text-[var(--ink)] sm:text-3xl">
+                    {item.title}
+                  </p>
                   <p className="mt-3 font-mono text-xs text-[rgba(29,19,33,0.6)]">{item.path}</p>
                   {/* Swap this placeholder with the production gallery asset at item.path. */}
                 </div>

@@ -39,7 +39,7 @@ export function Navbar() {
               href={link.href}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="rounded-full px-4 py-2 text-sm font-medium text-[rgba(32,26,37,0.82)] transition hover:bg-white/70 hover:text-[var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff5a97]"
+              className="shrink-0 rounded-full px-4 py-2 text-sm font-medium text-[rgba(32,26,37,0.82)] transition hover:bg-white/70 hover:text-[var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff5a97]"
             >
               {link.label}
             </motion.a>

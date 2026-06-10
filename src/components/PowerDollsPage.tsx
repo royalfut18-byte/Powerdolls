@@ -20,7 +20,7 @@ export function PowerDollsPage() {
   useEffect(() => {
     const timeout = window.setTimeout(() => {
       startTransition(() => setIntroVisible(false));
-    }, reduceMotion ? 900 : 2500);
+    }, reduceMotion ? 1200 : 3400);
     return () => window.clearTimeout(timeout);
   }, [reduceMotion]);
 

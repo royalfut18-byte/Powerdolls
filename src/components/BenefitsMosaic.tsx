@@ -33,7 +33,7 @@ export function BenefitsMosaic() {
           </h2>
         </motion.div>
 
-        <div className="grid auto-rows-[170px] gap-4 md:grid-cols-4">
+        <div className="grid auto-rows-[145px] gap-4 sm:auto-rows-[170px] md:grid-cols-4">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.name}
@@ -46,7 +46,9 @@ export function BenefitsMosaic() {
             >
               <div className="absolute right-4 top-4 h-12 w-12 rounded-full border border-current/18" />
               <div className="absolute bottom-4 left-5 h-px w-24 bg-current/25" />
-              <p className="max-w-[12rem] font-display text-3xl leading-tight">{benefit.name}</p>
+              <p className="max-w-[12rem] font-display text-[1.75rem] leading-tight sm:text-3xl">
+                {benefit.name}
+              </p>
             </motion.div>
           ))}
         </div>

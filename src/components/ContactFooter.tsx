@@ -10,7 +10,7 @@ export function ContactFooter() {
           <div className="space-y-6">
             <p className="font-script text-5xl text-[#ffe3a9]">Power Dolls</p>
             <h2 className="max-w-2xl font-display text-4xl leading-tight text-[#fff7ef] sm:text-5xl">
-              Empower and brighten not only your children’s day, but their future.
+              Empower and brighten not only your children&apos;s day, but their future.
             </h2>
             <p className="max-w-xl text-base leading-7 text-white/74">
               A colourful emotional support brand created to comfort, encourage, and inspire brave
@@ -21,7 +21,7 @@ export function ContactFooter() {
                 href="mailto:info@powerdolls.co"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.98 }}
-                className="button-primary"
+                className="button-primary w-full sm:w-auto"
               >
                 Email Us
               </motion.a>
@@ -31,7 +31,7 @@ export function ContactFooter() {
                 rel="noreferrer"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.98 }}
-                className="button-secondary border-white/20 bg-white/10 text-white hover:bg-white/14"
+                className="button-secondary w-full border-white/20 bg-white/10 text-white hover:bg-white/14 sm:w-auto"
               >
                 Visit Instagram
               </motion.a>
@@ -48,23 +48,38 @@ export function ContactFooter() {
                 Company Director
               </p>
               <p>
-                Phone: <a href="tel:0416595902" className="underline decoration-white/20 underline-offset-4">0416 595 902</a>
+                Phone:{' '}
+                <a
+                  href="tel:0416595902"
+                  className="underline decoration-white/20 underline-offset-4"
+                >
+                  0416 595 902
+                </a>
               </p>
               <p>
                 Email:{' '}
-                <a href="mailto:info@powerdolls.co" className="underline decoration-white/20 underline-offset-4">
+                <a
+                  href="mailto:info@powerdolls.co"
+                  className="underline decoration-white/20 underline-offset-4"
+                >
                   info@powerdolls.co
                 </a>
               </p>
               <p>
                 Website:{' '}
-                <a href="http://www.powerdolls.co" className="underline decoration-white/20 underline-offset-4">
+                <a
+                  href="http://www.powerdolls.co"
+                  className="underline decoration-white/20 underline-offset-4"
+                >
                   www.powerdolls.co
                 </a>
               </p>
               <p>
                 Instagram:{' '}
-                <a href="https://instagram.com/powerdollsco" className="underline decoration-white/20 underline-offset-4">
+                <a
+                  href="https://instagram.com/powerdollsco"
+                  className="underline decoration-white/20 underline-offset-4"
+                >
                   instagram.com/powerdollsco
                 </a>
               </p>
