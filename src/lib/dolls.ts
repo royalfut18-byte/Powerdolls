@@ -19,7 +19,7 @@ export const dolls: Doll[] = [
     purpose:
       'A gentle reminder of unconditional love, safe closeness, and the feeling of being deeply treasured.',
     motif: 'Star map',
-    assetPath: '/images/startruckbluedollimage.png',
+    assetPath: '/images/starstruck45.png',
     angle: 'rotate-[-2deg]',
     cardClass:
       'from-[#09103f] via-[#162778] to-[#ff4fa3] text-white before:bg-[radial-gradient(circle_at_top,_rgba(255,221,87,0.28),_transparent_42%)]',
@@ -33,7 +33,7 @@ export const dolls: Doll[] = [
     purpose:
       'Designed to stay beside children through essays, exams, HSC preparation, and the pressure that can come with learning.',
     motif: 'Notebook',
-    assetPath: '/images/dictionarywithlegsdoll.png',
+    assetPath: '/images/dictionarywithlegs45ratio.png',
     angle: 'rotate-[1.5deg]',
     cardClass:
       'from-[#fff5d8] via-[#cfe8ff] to-[#7bc7ff] text-[#10213a] before:bg-[linear-gradient(0deg,_transparent_0,_transparent_17px,_rgba(0,52,124,0.12)_18px)]',
@@ -47,7 +47,7 @@ export const dolls: Doll[] = [
     purpose:
       'Created to nurture self-esteem, confidence, emotional wellbeing, and a lasting sense of self-worth.',
     motif: 'Colour wash',
-    assetPath: '/images/insideoutdoll.png',
+    assetPath: '/images/insideout45.png',
     angle: 'rotate-[-1deg]',
     cardClass:
       'from-[#fff5ee] via-[#ffb0b9] to-[#fdde60] text-[#341527] before:bg-[radial-gradient(circle_at_20%_20%,_rgba(255,255,255,0.52),_transparent_34%),radial-gradient(circle_at_80%_30%,_rgba(146,71,255,0.18),_transparent_26%),radial-gradient(circle_at_50%_80%,_rgba(0,202,255,0.22),_transparent_32%)]',
@@ -61,7 +61,7 @@ export const dolls: Doll[] = [
     purpose:
       'A reassuring companion for children facing illness, holding space for bravery, tenderness, and team support.',
     motif: 'Shield',
-    assetPath: '/images/teamsoldierspowerdoll.png',
+    assetPath: '/images/teamsoldiers45.png',
     angle: 'rotate-[2deg]',
     cardClass:
       'from-[#191919] via-[#42214b] to-[#ff7a59] text-white before:bg-[linear-gradient(135deg,_rgba(255,255,255,0.08)_25%,_transparent_25%,_transparent_50%,_rgba(255,255,255,0.08)_50%,_rgba(255,255,255,0.08)_75%,_transparent_75%)]',
@@ -76,7 +76,7 @@ export const dolls: Doll[] = [
     purpose:
       'Celebrates curiosity, imagination, unconventional thinking, and the strengths children carry in their own way.',
     motif: 'Discovery notes',
-    assetPath: '/images/drcuriousdoll.png',
+    assetPath: '/images/drcurious45.png',
     angle: 'rotate-[-2deg]',
     cardClass:
       'from-[#ecffe2] via-[#b5f17b] to-[#4fb892] text-[#143126] before:bg-[radial-gradient(circle_at_10%_10%,_rgba(255,255,255,0.36),_transparent_28%),linear-gradient(90deg,_transparent_0,_transparent_23px,_rgba(20,49,38,0.06)_24px)]',
@@ -90,7 +90,7 @@ export const dolls: Doll[] = [
     purpose:
       'Helps children name their worries, feel heard, and find comfort in moments that feel heavy or uncertain.',
     motif: 'Monster notes',
-    assetPath: '/images/worrymonster.png',
+    assetPath: '/images/worrymonster45.png',
     angle: 'rotate-[1deg]',
     cardClass:
       'from-[#2d1660] via-[#6d2fd8] to-[#ff7f45] text-white before:bg-[radial-gradient(circle_at_20%_20%,_rgba(255,255,255,0.2),_transparent_22%),radial-gradient(circle_at_80%_60%,_rgba(255,228,122,0.24),_transparent_24%)]',
