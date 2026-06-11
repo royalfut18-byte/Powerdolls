@@ -18,7 +18,7 @@ export function FounderStory() {
           <div className="relative aspect-[4/5] bg-[linear-gradient(180deg,_#fffaf4,_#f2ebe2)]">
             <Image
               src="/images/ownerimagebetterratio.png"
-              alt="Power Dolls founder Muston with a group of dolls"
+              alt="Power Dolls founder Katerina Muston with a group of dolls"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
               className="object-cover object-center"
@@ -26,7 +26,7 @@ export function FounderStory() {
           </div>
           <div className="bg-[#18141a] p-6 text-white">
             <p className="text-xs uppercase tracking-[0.42em] text-white/58">Founder Story</p>
-            <p className="mt-6 font-script text-4xl text-[#ffe2a1]">Muston</p>
+            <p className="mt-6 font-script text-4xl text-[#ffe2a1]">Katerina Muston</p>
             <p className="mt-3 text-sm uppercase tracking-[0.28em] text-white/60">Company Director</p>
           </div>
         </div>
